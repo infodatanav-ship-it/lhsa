@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Group Management</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+		.section { margin-bottom: 30px; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+		.form-group { margin-bottom: 15px; }
+		label { display: block; margin-bottom: 5px; font-weight: bold; }
+		select, button { padding: 8px 12px; margin: 5px 0; }
+		button { background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+		button:hover { background: #0056b3; }
+		.user-list { margin-top: 15px; }
+		.user-item { padding: 8px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+		.success { color: green; }
+		.error { color: red; }
+	</style>
+</head>
+<body>
+	<div class="container">
+
+		<h1>User Group Management</h1>
+
+		<!-- Add User to Group Form -->
+		<div class="section">
+			<h2>Add User to Group</h2>
+			<div class="form-group">
+				<label for="userSelect">Select User:</label>
+				<select id="userSelect">
+					<option value="">Loading users...</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="groupSelect">Select Group:</label>
+				<select id="groupSelect">
+					<option value="">Loading groups...</option>
+				</select>
+			</div>
+
+			<button id="addUserBtn">Add User to Group</button>
+			<div id="addMessage"></div>
+		</div>
+
+		<!-- View Group Members -->
+		<div class="section">
+			<h2>View Group Members</h2>
+			<div class="form-group">
+				<label for="viewGroupSelect">Select Group to View:</label>
+				<select id="viewGroupSelect">
+					<option value="">Loading groups...</option>
+				</select>
+			</div>
+			
+			<div id="groupUsers">
+				<p>Select a group to view its members</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

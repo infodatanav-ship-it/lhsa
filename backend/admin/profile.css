@@ -1,0 +1,5 @@
+/* profile.css – extends auth.css */
+.sep{margin:24px 0;border:none;border-top:1px solid #dee2e6}
+.success-box{background:#d1e7dd;color:#0f5132;padding:10px 12px;border-radius:var(--radius);margin-bottom:20px}
+.tag-list{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:var(--accent);color:#fff;padding:4px 10px;border-radius:12px;font-size:13px}

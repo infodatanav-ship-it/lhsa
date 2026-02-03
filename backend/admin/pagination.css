@@ -1,0 +1,10 @@
+/* pagination bar */
+.pageBar{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-size:14px}
+.pageSize select{margin:0 6px;padding:4px 8px;border:1px solid #ced4da;border-radius:var(--radius)}
+.pageLinks a,.pageLinks span{display:inline-block;padding:4px 10px;margin:0 2px;border-radius:var(--radius);text-decoration:none;color:var(--text)}
+.pageLinks a:hover{background:rgba(0,0,0,.06)}
+.pageLinks .active{background:var(--accent);color:#fff}
+.pageLinks .disabled{color:var(--muted);cursor:not-allowed}
+@media(max-width:600px){
+	.pageBar{flex-direction:column;gap:12px}
+}

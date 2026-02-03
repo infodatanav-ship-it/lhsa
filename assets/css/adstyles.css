@@ -1,0 +1,142 @@
+.ad-spaces {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 25px;
+	margin-bottom: 40px;
+}
+
+.ad-space {
+	background: white;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.ad-space:hover {
+	transform: translateY(-5px);
+}
+
+.ad-header {
+	background: #3498db;
+	color: white;
+	padding: 15px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.ad-content {
+	padding: 20px;
+	min-height: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.ad-icon {
+	font-size: 3rem;
+	color: #bdc3c7;
+	margin-bottom: 20px;
+}
+
+.ad-title {
+	font-size: 1.5rem;
+	color: #2c3e50;
+	margin-bottom: 10px;
+}
+
+.ad-desc {
+	color: #7f8c8d;
+	margin-bottom: 20px;
+}
+
+.ad-cta {
+	display: inline-block;
+	background: #3498db;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: background 0.3s ease;
+}
+
+.ad-cta:hover {
+	background: #2980b9;
+}
+
+.ad-footer {
+	background: #f8f9fa;
+	padding: 15px;
+	text-align: center;
+	color: #7f8c8d;
+	font-size: 0.9rem;
+}
+
+.usage {
+	background: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	margin-bottom: 40px;
+}
+
+.usage h2 {
+	color: #2c3e50;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.usage-steps {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
+}
+
+.step {
+	text-align: center;
+	padding: 20px;
+}
+
+.step-number {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: #3498db;
+	color: white;
+	border-radius: 50%;
+	line-height: 40px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+.step-title {
+	color: #2c3e50;
+	margin-bottom: 10px;
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	color: #7f8c8d;
+	font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+	.ad-spaces {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Animation for placeholder */
+@keyframes pulse {
+	0% { opacity: 0.6; }
+	50% { opacity: 1; }
+	100% { opacity: 0.6; }
+}
+
+.pulse {
+	animation: pulse 2s infinite;
+}

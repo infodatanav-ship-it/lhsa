@@ -1,0 +1,9 @@
+/* admin/dashboard.css – extends auth.css tokens */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-bottom:32px;margin-top:32px}
+.card-count{display:flex;align-items:center;gap:16px;background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.card-count i{font-size:32px;color:var(--accent)}
+.card-count .num{font-size:28px;font-weight:600}
+.card-count .label{font-size:14px;color:var(--muted)}
+section.card{margin-bottom:24px}
+h3{margin-bottom:16px;font-size:18px;font-weight:600}
+/* re-use existing table styles */

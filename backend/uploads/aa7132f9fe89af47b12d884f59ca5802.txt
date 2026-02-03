@@ -1,0 +1,38 @@
+SECURITY IMPLEMENTATION
+
+1. Password Strength/Complexity - ONLY FOR REGISTRATION
+1.1. Front-End (Javascript)
+1.2. Back-end (PHP)
+1.3. Include Symbol, Numbers, Lowercase, Uppercase & Ambiguous Characters
+1.4. Encryption
+
+2. Password Validity for [90] days
+2.1. Creation Date important
+2.2. Amount of days to expiration, display modal to user to change his password
+
+3. Can't reuse any older passwords
+
+4. Process to reset Password
+4.1. Reset password button
+4.2. Click on link
+4.3. Email sent to user
+4.4. Click on link in your mailbox
+4.5. Reset Password Form
+4.6. Admin can change Internal Fetola Users's passwords
+4.7. User can change his own password
+
+5. Admin can only change the "Internal Fetola Mentors"
+6. Mentors/Mentor Liasons can change their own password
+7. We must do an assessment: we can and cannot change passwords (Juan to advise)
+
+[PLEASE DISCUSS AGAIN WITH JUAN]
+
+8. Audit Trail
+
+9. Password Lockout [5 attemps]
+
+[
+ACTION POINTS
+1. Send security document to Juan.
+]
+

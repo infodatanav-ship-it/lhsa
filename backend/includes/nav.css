@@ -1,0 +1,37 @@
+/* ==========  TOP NAVBAR  ========== */
+:root{--nav-height:60px}
+.topNav{
+	display:flex;align-items:center;justify-content:space-between;
+	height:var(--nav-height);
+	background:var(--card);
+	box-shadow:var(--shadow);
+	padding:0 24px;
+	position:sticky;top:0;z-index:1050;
+	margin-bottom:50px;
+}
+.navBrand{font-size:20px;font-weight:600;color:var(--accent)}
+.navToggle{display:none}               /* checkbox hack */
+.navHamb{font-size:22px;cursor:pointer;display:none;color:var(--text)}
+
+.navLinks{display:flex;align-items:center;gap:6px;list-style:none;margin:0}
+.navLink{
+	display:flex;align-items:center;gap:8px;
+	padding:8px 12px;border-radius:var(--radius);
+	color:var(--text);text-decoration:none;font-size:15px;
+	transition:background .2s;
+}
+.navLink:hover{background:rgba(0,0,0,.06)}
+.navLink.active{background:var(--accent);color:#fff}
+
+/* ---- responsive ---- */
+@media(max-width:768px){
+	.navHamb{display:block}
+	.navLinks{
+		position:absolute;top:var(--nav-height);left:0;right:0;
+		flex-direction:column;align-items:stretch;
+		background:var(--card);box-shadow:var(--shadow);
+		max-height:0;overflow:hidden;transition:max-height .3s ease;
+	}
+	.navToggle:checked ~ .navLinks{max-height:400px}
+	.navLink{width:100%;justify-content:flex-start}
+}

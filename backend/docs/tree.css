@@ -1,0 +1,33 @@
+/* tree.css */
+.breadcrumb{font-size:14px;margin-bottom:16px}
+.breadcrumb a{color:var(--accent);text-decoration:none}
+.tree{margin-top:8px}
+.node{display:flex;align-items:center;padding:6px 0;border-bottom:1px solid #f1f5f9}
+.node .toggle{width:20px;cursor:pointer;color:var(--muted)}
+.node .icon{margin-right:8px}
+.node .name{flex:1}
+.node .size,.node .date{margin-left:12px;font-size:13px;color:var(--muted)}
+.node .actions{margin-left:auto;display:flex;gap:8px}
+.node .actions a{color:var(--muted)}
+.node .actions a:hover{color:var(--accent)}
+.node[data-folder="1"]{cursor:pointer}
+.node.open > .toggle{transform:rotate(90deg)}
+.custom-file-input {
+	padding: 10px 15px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 14px;
+	transition: background-color 0.3s;
+}
+
+.custom-file-input:hover {
+	background-color: #0056b3;
+}
+
+#parent_id {
+	height: 40px;
+	/* color: red; */
+}

@@ -1,0 +1,54 @@
+/* admin/modal.css – pure-css modal */
+.modal{
+	position:fixed;
+	inset:0;
+	background:rgba(0,0,0,.45);
+	display:none;
+	align-items:center;
+	justify-content:center;
+	z-index:1000;
+}
+.modal-content{
+	background:var(--card);
+	border-radius:var(--radius);
+	box-shadow:var(--shadow);
+	width:90%;
+	max-width:420px;
+	padding:32px 28px;
+	position:relative;
+	margin-top: 70px;
+}
+.modal-close{
+	position:absolute;
+	top:12px;
+	right:16px;
+	font-size:24px;
+	cursor:pointer;
+	color:var(--muted);
+}
+.modal-close:hover{color:var(--text)}
+.user-form{display:flex;flex-direction:column;gap:18px}
+.form-group{display:flex;flex-direction:column}
+.form-group label{margin-bottom:6px;font-size:14px;color:var(--muted)}
+.form-group input,
+.form-group select{
+	padding:10px 12px;
+	border:1px solid #ced4da;
+	border-radius:var(--radius);
+	font-size:15px;
+}
+.form-group input:focus,
+.form-group select:focus{
+	outline:none;
+	border-color:var(--accent);
+}
+
+
+/* members modal – dual list boxes */
+.modal-content.lg{max-width:600px}
+.dual-wrap{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.dual-box{flex:1;display:flex;flex-direction:column}
+.dual-list{height:240px;padding:6px;border:1px solid #ced4da;border-radius:var(--radius);font-size:14px}
+.dual-arrows{display:flex;flex-direction:column;gap:8px}
+.btn-icon{width:36px;height:36px;border:1px solid var(--accent);background:#fff;color:var(--accent);border-radius:50%;cursor:pointer;font-size:16px}
+.btn-icon:hover{background:var(--accent);color:#fff}
