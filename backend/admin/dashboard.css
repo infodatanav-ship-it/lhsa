@@ -72,7 +72,7 @@ h1.browser-title{margin:0 0 8px 0;font-weight:600}
 .preview-content .preview-media pre{max-width:80vw;max-height:80vh;overflow:auto;white-space:pre-wrap;padding:12px;margin:0}
 /* small helpers used by browser markup */
 .browser-aside{width:200px}
-.browser-main{flex:1;min-width:650px;}
+.browser-main{flex:1;min-width:600px;}
 .browser-upload-form{margin-top:10px}
 .inline-form{display:inline}
 .btn-sm{padding:4px 6px;font-size:12px}
