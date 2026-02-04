@@ -64,7 +64,7 @@ $(document).ready(function() {
 	const $avail    = $('#availList'), $member = $('#memberList');
 
 	/* open members modal */
-	$('.table').on('click', '.users', function (e) {
+	$('.tbl').on('click', '.users', function (e) {
 		e.preventDefault();
 		console.log("Members Modal button clicked");
 		const gid  = $(this).data('id');

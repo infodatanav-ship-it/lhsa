@@ -1,9 +1,85 @@
 /* admin/dashboard.css – extends auth.css tokens */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-bottom:32px;margin-top:32px}
 .card-count{display:flex;align-items:center;gap:16px;background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}
-.card-count i{font-size:32px;color:var(--accent)}
+.card-count i{font-size:18px;color:var(--accent);width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center}
 .card-count .num{font-size:28px;font-weight:600}
 .card-count .label{font-size:14px;color:var(--muted)}
+/* table / list icons */
+.tbl i.fa-fw, .tbl .fa-fw { font-size:12px; width:24px; text-align:center; display:inline-block; }
+/* ensure smaller icons for compact contexts */
+.card-list .fname i, .card-list .fname .fa-fw { font-size:12px; }
+/* reduce embedded browser SVG icon size when included in dashboard */
+.card-list .icon, .card-list .item .icon, .panel .icon { width:28px; height:28px; }
 section.card{margin-bottom:24px}
 h3{margin-bottom:16px;font-size:18px;font-weight:600}
 /* re-use existing table styles */
+
+/* ===== Browser component styles (migrated from backend/browser.php) ===== */
+:root{--browser-bg:var(--bg);--browser-card:var(--card);--browser-accent:var(--accent);--browser-muted:var(--muted)}
+body.browser-page { background: var(--browser-bg); }
+.browser-root{display:flex;gap:12px;align-items:flex-start}
+.browser-root aside{width:260px}
+.toolbar{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.btn{background:#fff;border:1px solid #d1d5db;padding:6px 8px;border-radius:4px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.btn-primary{background:var(--browser-accent);color:#fff;border-color:var(--browser-accent)}
+.btn-danger{background:#ef4444;color:#fff;border-color:#ef4444}
+.btn-rename{background:#f59e0b;color:#fff;border-color:#f59e0b}
+.breadcrumb{background:transparent;padding:6px 10px;border-radius:6px}
+.panel{background:var(--browser-card);padding:12px;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,0.04)}
+.items{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+.item{width:140px;padding:8px;border-radius:6px;text-align:center;background:transparent;color:#111}
+.item a{display:block;text-decoration:none;color:inherit}
+.icon{width:48px;height:48px;margin:6px auto 8px}
+.name{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.muted{color:var(--browser-muted);font-size:13px}
+h1.browser-title{margin:0 0 8px 0;font-weight:600}
+
+@media(max-width:900px){
+	.browser-root{flex-direction:column}
+	.browser-root aside{width:100%}
+	.items{justify-content:flex-start}
+}
+
+/* ensure embedded SVG icons scale down inside dashboard contexts */
+.panel .icon{width:28px;height:28px}
+
+/* small utilities used by browser markup */
+.preview-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;padding:20px;z-index:9999}
+.preview-modal .preview-content{background:#fff;border-radius:8px;max-width:90vw;max-height:90vh;overflow:auto;padding:12px;position:relative}
+.preview-modal.open{display:flex}
+/* media inside preview: images and iframes use CSS, not inline styles */
+.preview-content .preview-media{display:flex;align-items:center;justify-content:center}
+.preview-content .preview-media img{max-width:80vw;max-height:80vh;width:auto;height:auto;border-radius:4px}
+.preview-content .preview-media iframe{max-width:80vw;max-height:80vh;width:auto;height:auto;border:0;border-radius:4px}
+/* text previews inside preview-media */
+.preview-content .preview-media pre{max-width:80vw;max-height:80vh;overflow:auto;white-space:pre-wrap;padding:12px;margin:0}
+/* folder tree styles */
+.browser-tree{list-style:none;padding-left:8px;margin:0}
+.browser-tree-item{margin:4px 0}
+/* ensure content sits below sticky top nav */
+.browserContent{
+	margin-top: calc(var(--nav-height,60px) + 4px);
+	padding: 24px;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media(max-width:768px){
+	.browserContent{ padding:12px; margin-top: calc(var(--nav-height,60px) + 2px); }
+}
+/* text previews inside preview-media */
+.preview-content .preview-media pre{max-width:80vw;max-height:80vh;overflow:auto;white-space:pre-wrap;padding:12px;margin:0}
+/* small helpers used by browser markup */
+.browser-aside{width:200px}
+.browser-main{flex:1;min-width:650px;}
+.browser-upload-form{margin-top:10px}
+.inline-form{display:inline}
+.btn-sm{padding:4px 6px;font-size:12px}
+
+/* panels for browser messages */
+.panel-error{background:#fee;border:1px solid #f5c2c7;margin:10px 0;padding:8px}
+.panel-success{background:#efe;border:1px solid #c6f6d5;margin:10px 0;padding:8px}
+.panel-title{font-weight:600;margin-bottom:8px}
+.preview-content .close-btn{position:absolute;right:8px;top:8px}
+.item-actions{margin-top:6px;display:flex;gap:6px;justify-content:center}

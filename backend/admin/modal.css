@@ -3,10 +3,19 @@
 	position:fixed;
 	inset:0;
 	background:rgba(0,0,0,.45);
-	display:none;
+	display:flex;
 	align-items:center;
 	justify-content:center;
 	z-index:1000;
+	opacity:0;
+	visibility:hidden;
+	pointer-events:none;
+	transition:opacity 220ms ease, visibility 220ms linear;
+}
+.modal.show{
+	opacity:1;
+	visibility:visible;
+	pointer-events:auto;
 }
 .modal-content{
 	background:var(--card);
@@ -16,7 +25,7 @@
 	max-width:420px;
 	padding:32px 28px;
 	position:relative;
-	margin-top: 70px;
+	margin-top: 0;
 }
 .modal-close{
 	position:absolute;

@@ -148,3 +148,9 @@ button{position:relative;display:flex;align-items:center;justify-content:center}
 
 /* ----- docs/docs.css – extends auth.css tokens ----- */
 /* docs/docs.css – extends auth.css tokens */
+
+
+browserContent {
+	flex: 1;
+	padding: 20px;
+}

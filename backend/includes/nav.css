@@ -1,13 +1,15 @@
 /* ==========  TOP NAVBAR  ========== */
 :root{--nav-height:60px}
 .topNav{
-	display:flex;align-items:center;justify-content:space-between;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
 	height:var(--nav-height);
 	background:var(--card);
 	box-shadow:var(--shadow);
 	padding:0 24px;
 	position:sticky;top:0;z-index:1050;
-	margin-bottom:50px;
+	margin-bottom:8px;
 }
 .navBrand{font-size:20px;font-weight:600;color:var(--accent)}
 .navToggle{display:none}               /* checkbox hack */

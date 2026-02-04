@@ -1,4 +1,12 @@
-/.git
+# Exclude folders that cause permission issues or are not needed in build context
+backend/uploads
+uploads
+.git
+.cache
+node_modules
+vendor
+*.log
+.vscode/.git
 /.vscode
 /.idea
 node_modules

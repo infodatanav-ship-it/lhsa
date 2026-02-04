@@ -11,6 +11,7 @@ $pages = [
 	'users'       => 'users',
 	'groups'      => 'groups',
 	'docs'        => 'docs',
+	'files'       => 'files',
 	'permissions' => 'permissions',
 	'profile'     => 'profile'
 ];
@@ -25,6 +26,7 @@ $menu = [
 	'users'       => ['label'=>'Users',       'icon'=>'fa-users',        'perm'=>'users.view'],
 	'groups'      => ['label'=>'Groups',      'icon'=>'fa-layer-group',  'perm'=>'groups.view'],
 	'docs'        => ['label'=>'Documents',   'icon'=>'fa-file-lines',   'perm'=>'docs.view'],
+	'files'       => ['label'=>'Files',       'icon'=>'fa-folder-open',  'perm'=>'files.view'],
 	'permissions' => ['label'=>'Permissions', 'icon'=>'fa-shield-halved','perm'=>'users.manage'],
 	'profile'     => ['label'=>'Profile',     'icon'=>'fa-user',         'perm'=>null],
 ];
@@ -47,9 +49,15 @@ $menu = [
 				<li>
 					<a class="navLink <?= ($currentPage === $key) ? 'active' : '' ?>"
 
-						<?php echo $key; ?>
-						<?php $filepath = $key == 'docs' ? '../docs/index.php' : '../admin/' . $key . '.' . 'php'; ?>
-
+						<?php // build filepath: docs and files need special locations
+						if ($key == 'docs') {
+							$filepath = '../docs/index.php';
+						} elseif ($key == 'files') {
+							$filepath = '../browser/index.php';
+						} else {
+							$filepath = '../admin/' . $key . '.' . 'php';
+						}
+						?>
 						href="<?php echo $filepath ?>"> <i class="fa-fw fa-solid <?= $item['icon'] ?>"></i><span><?= $item['label'] ?></span>
 					</a>
 				</li>

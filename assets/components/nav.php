@@ -48,6 +48,19 @@
 			</ul>
 		</li>
 		
+		<?php
+		// Show Files link when the current user is allowed to browse files.
+		$permFile = __DIR__ . '/../../backend/browser_permissions.php';
+		if (file_exists($permFile)) require_once $permFile;
+		$showFiles = function_exists('userCanBrowse') ? userCanBrowse() : (!empty(
+				session_status() === PHP_SESSION_ACTIVE ? 
+					($_SESSION['user_id'] ?? false) : (session_start() ? ($_SESSION['user_id'] ?? false) : false)
+			));
+		if ($showFiles): ?>
+		<li class="nav-item">
+			<a href="./backend/browser.php" class="nav-link">Files</a>
+		</li>
+		<?php endif; ?>
 		<li class="nav-item">
 			<a href="./contacts.php" class="nav-link">Contact</a>
 		</li>
